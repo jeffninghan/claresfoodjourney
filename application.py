@@ -1,10 +1,10 @@
 from flask import Flask, render_template
-app = Flask(__name__)
+application = Flask(__name__)
  
-@app.route('/')
-@app.route('/index')
+@application.route('/')
+@application.route('/index')
 def index():
     return render_template('index.html', user_image='/static/funny_clare.png')
  
 if __name__ == '__main__':
-    app.run()
+    application.run()
