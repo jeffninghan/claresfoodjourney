@@ -12,7 +12,7 @@ def index():
 
 @application.route('/status')
 def status():
-  status = subprocess.check_output(['bash','-c', "awk '/./{line=$0} END{print line}' /home/ec2-user/instagram/claresfoodjourney.log"])
+  status = subprocess.check_output(['bash','-c', "awk '/./{line=$0} END{print line}' /tmp/claresfoodjourney.log"])
   return render_template('status.html', status=status)
 
  
